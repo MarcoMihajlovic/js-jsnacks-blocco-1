@@ -260,13 +260,36 @@ console.log("");
 
 var array1Esercizio6 = [];
 var array2Esercizio6 = [];
+var numeroEsercizio6 = 0;
+controllo = false;
 
 for (var i = 0; i < Math.round(Math.random()*9 + 1); i++) {
-    array1Esercizio6.push(Math.round(Math.random()*99 + 1));
+    controllo = false;
+    
+    while(!controllo){
+        
+        numero = Math.round(Math.random()*99 + 1);
+        
+        if(!array1Esercizio6.includes(numero)) {
+            array1Esercizio6.push(numero);
+            controllo = true;
+        }
+    }
 }
 
 for (var i = 0; i < Math.round(Math.random()*9 + 1); i++) {
-    array2Esercizio6.push(Math.round(Math.random()*99 + 1));
+
+    controllo = false;
+    
+    while(!controllo){
+        
+        numero = Math.round(Math.random()*99 + 1);
+        
+        if(!array2Esercizio6.includes(numero)) {
+            array2Esercizio6.push(numero);
+            controllo = true;
+        }
+    }
 }
 
 console.log("Il primo array ha " + array1Esercizio6);
@@ -276,12 +299,32 @@ console.log("");
 
 if (array1Esercizio6.length < array2Esercizio6.length) {
     for (i = array1Esercizio6.length; i < array2Esercizio6.length; i++) {
-        array1Esercizio6.push(Math.round(Math.random()*99 + 1));
+        controllo = false;
+    
+        while(!controllo){
+            
+            numero = Math.round(Math.random()*99 + 1);
+            
+            if(!array1Esercizio6.includes(numero)) {
+                array1Esercizio6.push(numero);
+                controllo = true;
+            }
+        }
     }
     console.log("Gli array ora sono: ");
 } else if (array1Esercizio6.length > array2Esercizio6.length) {
     for (i = array2Esercizio6.length; i < array1Esercizio6.length; i++) {
-        array2Esercizio6.push(Math.round(Math.random()*99 + 1));
+        controllo = false;
+    
+        while(!controllo){
+            
+            numero = Math.round(Math.random()*99 + 1);
+            
+            if(!array2Esercizio6.includes(numero)) {
+                array2Esercizio6.push(numero);
+                controllo = true;
+            }
+        }
     }
     console.log("Gli array ora sono: ");
 } else {
